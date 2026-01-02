@@ -76,8 +76,13 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* CTA Button - Desktop */}
             <motion.button
+              onClick={() => {
+                window.open(
+                  "https://www.linkedin.com/in/kristian-sotiri/",
+                  "_blank"
+                );
+              }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={`Inconsolata cursor-pointer hidden md:block px-6 py-2 rounded-full font-medium transition-all duration-300 ${
@@ -168,7 +173,12 @@ export default function Navbar() {
                 transition={{ delay: 0.3 }}
                 whileTap={{ scale: 0.95 }}
                 className="mt-auto w-full bg-black text-white py-4 rounded-full font-medium hover:bg-gray-800 transition-colors"
-                onClick={() => setPhoneMenu(false)}
+                onClick={() => {
+                  window.open(
+                    "https://www.linkedin.com/in/kristian-sotiri/",
+                    "_blank"
+                  );
+                }}
               >
                 Let&apos;s Talk
               </motion.button>

@@ -16,7 +16,6 @@ export default function FirstSection() {
       if (!headlineRef.current || !paragraphRef.current || !buttonRef.current)
         return;
 
-      // Set initial states
       gsap.set(headlineRef.current.children, { opacity: 0, y: 50 });
       gsap.set(paragraphRef.current, { opacity: 0, y: 30 });
       gsap.set(buttonRef.current, { opacity: 0, y: 20, scale: 0.9 });
@@ -56,7 +55,6 @@ export default function FirstSection() {
           0.9
         );
 
-      // Floating animation for button (continuous) - starts after main animation
       gsap.to(buttonRef.current, {
         y: -5,
         duration: 2,
@@ -127,7 +125,15 @@ export default function FirstSection() {
           ref={buttonRef}
           className="flex flex-col md:flex-row gap-2 items-center justify-center "
         >
-          <button className="cursor-pointer flex gap-3 mt-8 px-8 py-3 border-2 border-black text-black rounded-md font-medium hover:bg-black hover:text-white transition-all duration-300">
+          <button
+            onClick={() => {
+              window.open(
+                "https://www.linkedin.com/in/kristian-sotiri/",
+                "_blank"
+              );
+            }}
+            className="cursor-pointer flex gap-3 mt-8 px-8 py-3 border-2 border-black text-black rounded-md font-medium hover:bg-black hover:text-white transition-all duration-300"
+          >
             <PhoneCall size={20} className="self-center" />
             Schedule a Call
           </button>
